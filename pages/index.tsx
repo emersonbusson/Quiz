@@ -18,7 +18,6 @@ export default function Home() {
   async function carregarIdsDasQuestoes() {
     const resp =  await fetch(`${BASE_URL}/questionario`)
     const idsDasQuestoes = await resp.json()
-    console.log(idsDasQuestoes)
     setIdsDasQuestoes(idsDasQuestoes)
   }
   
@@ -49,11 +48,8 @@ export default function Home() {
   
   }
   function idProximaPergunta(){
-    if(questao){
       const proximoIndice = idsDasQuestoes.indexOf(questao.id) + 1
       return idsDasQuestoes[proximoIndice]
-    }
-
   }
 
 
@@ -71,17 +67,24 @@ export default function Home() {
 
 
   function finalizar(){
-    router.push("/resultado")
+    router.push({
+        pathname: "/resultado",
+        query: {
+          total: idsDasQuestoes.length,
+          certas: respostasCertas,
+          
+        }
+      })
   }
 
 
 
-  return(
-      <Questionario
-        questao={questao}
-        ultima={idProximaPergunta() === undefined}
-        QuestaoRespondida={QuestaoRespondida}
+  return questao ? (
+    <Questionario
+      questao={questao}
+      ultima={idProximaPergunta() === undefined}
+      QuestaoRespondida={QuestaoRespondida}
         irParaProximoPasso={irParaProximoPasso}
       />
-      )
+  ) : false    
 }    

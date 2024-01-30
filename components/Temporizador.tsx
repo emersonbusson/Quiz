@@ -3,6 +3,7 @@ import styles from '../styles/Temporizador.module.css'
 
 
 interface TemporizadorProps{
+    key: any
     duracao: number
     tempoEsgotado: () => void
 }
@@ -16,8 +17,8 @@ export default function Temporizador(props: TemporizadorProps){
                 size={120}
                 isPlaying
                 onComplete={props.tempoEsgotado}
-                colors={['#BCE596','#F7B801','#ED827A']}
-                colorsTime={[7, 4, 0]}> 
+                colors={['#BCE596','#F7B801','#FF0000']}
+                colorsTime={[20, 10, 0]}> 
             {({remainingTime }) => remainingTime}    
             
             

@@ -30,6 +30,43 @@ const questoes: QuestaoModel[] = [
         RespostaModel.errada('Trapézio'),
         RespostaModel.certa('Escaleno'),
     ]),
+    new QuestaoModel(208, 'Qual foi o último Presidente do Período da ditadura militar do Brasil?', [
+        RespostaModel.errada('Ernesto Geisel'),
+        RespostaModel.errada('Costa e Silva'),
+        RespostaModel.errada('Emílio Médici'),
+        RespostaModel.certa('João Fiqueiredo'),
+    ]),
+
+    new QuestaoModel(210, 'Que nome se dá à purificação por meio da água?', [
+        RespostaModel.errada('Ablução'),
+        RespostaModel.errada('Abnegação'),
+        RespostaModel.errada('Abrupção'),
+        RespostaModel.certa('Abolição'),
+
+    ]),
+    
+    new QuestaoModel(212, 'Que nome se dá à purificação por meio da água?', [
+        RespostaModel.errada('Ablução'),
+        RespostaModel.errada('Abnegação'),
+        RespostaModel.errada('Abrupção'),
+        RespostaModel.certa('Abolição'),
+
+    ]),
+
+    new QuestaoModel(215, 'Quem compôs o Hino da indepêndencia?', [
+        RespostaModel.errada('Carlos Gomes'),
+        RespostaModel.errada('Castro Alves'),
+        RespostaModel.errada('Manuel Bandeira'),
+        RespostaModel.certa('Dom Pedro I'),
+    ]),
+    
+    new QuestaoModel(218, 'Em que país nasceu Carmen Miranda?', [
+        RespostaModel.errada('Argentina'),
+        RespostaModel.errada('Brasil'),
+        RespostaModel.errada('Espanha'),
+        RespostaModel.certa('Portugal'),
+    ]),
+
 
    //outras novas questões a cadastrar
 
